@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timer đếm ngược</title>
+<!-- CSS chưa viết, để sẵn tên file cho sau này -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Màn hình bắt đầu: chỉ có nút "study" ===== -->
+<div id="startScreen" class="start-screen">
+  <button id="studyBtn" class="btn study-btn" type="button">study</button>
+</div>
+
+<!-- ===== Giao diện timer: ẩn cho tới khi bấm nút "study" ===== -->
+<main id="timerScreen" class="timer-page" hidden>
+
+  <!-- ===== Ô đếm streak (số ngày liên tiếp vào trang) ===== -->
+  <div id="streakBox" class="streak-box" title="Số ngày liên tiếp bạn vào trang">
+    🔥 <span id="streakValue" class="streak-value">1</span>
+  </div>
+  <div id="streakMsg" class="streak-msg"></div>
+
+  <!-- ===== DÒNG PRINT: hiển thị đồng hồ đếm ngược lên màn hình ===== -->
+  <div id="display" class="timer-display">00:00:00</div>
+
+  <div class="row timer-controls">
+    <!-- ===== Ô 1: ô nhập thời gian cần đếm ngược (giờ:phút:giây) ===== -->
+    <input id="timeInput" class="timer-input" type="text" inputmode="numeric"
+           placeholder="hh:mm:ss" value="00:25:00"
+           aria-label="Thời gian đếm ngược (giờ:phút:giây)">
+
+    <!-- ===== Ô 2: nút bấm start ===== -->
+    <button id="startBtn" class="btn btn-start" type="button">Start</button>
+
+    <!-- ===== Nút dừng / tiếp tục ===== -->
+    <button id="pauseBtn" class="btn btn-pause" type="button" disabled>Dừng</button>
+  </div>
+
+  <div id="msg" class="timer-msg"></div>
+
+  <!-- ===== Nút mở cửa sổ chat ===== -->
+  <button id="chatToggleBtn" class="btn chat-toggle-btn" type="button" aria-haspopup="dialog" aria-expanded="false">
+    💬 Hỏi đáp
+  </button>
+</main>
+
+<!-- ===== Cửa sổ chat ===== -->
+<div id="chatWindow" class="chat-window" hidden role="dialog" aria-label="Cửa sổ hỏi đáp">
+  <div class="chat-header">
+    <span class="chat-title">Hỏi đáp</span>
+    <button id="chatCloseBtn" class="btn chat-close-btn" type="button" aria-label="Đóng cửa sổ chat">✕</button>
+  </div>
+
+  <!-- Nơi in câu hỏi và câu trả lời -->
+  <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+  <form id="chatForm" class="chat-form">
+    <input id="chatInput" class="chat-input" type="text" placeholder="Nhập câu hỏi..." autocomplete="off">
+    <button id="chatSendBtn" class="btn chat-send-btn" type="submit">Gửi</button>
+  </form>
+</div>
+
+<script src="start-screen.js"></script>
+<script src="streak.js"></script>
+<script src="timer.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

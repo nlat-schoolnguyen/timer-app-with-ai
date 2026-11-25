@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Python backend
+backend/__pycache__/
+backend/*.pyc
+backend/.venv/
+backend/venv/
+backend/.env
+
+# Trường hợp lỡ tạo .env ở thư mục gốc
+.env
