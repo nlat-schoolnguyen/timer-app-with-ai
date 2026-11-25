@@ -1,7 +1,7 @@
 // ===== Logic cửa sổ chat: mở/đóng, gửi câu hỏi, nhận câu trả lời từ backend =====
 
 // Đổi địa chỉ này nếu backend chạy ở cổng hoặc tên miền khác
-const CHAT_API_URL = "http://localhost:5000/api/chat";
+const CHAT_API_URL = "https://timer-app-with-ai.onrender.com/api/chat";
 
 const chatToggleBtn = document.getElementById("chatToggleBtn");
 const chatWindow    = document.getElementById("chatWindow");
