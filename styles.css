@@ -1,14 +1,7 @@
-/*
-  Phong cách lấy cảm hứng từ cafe.pauwee.com/pomodoro:
-  nền kem phẳng, viền đen 2px, thẻ trắng, nút đen bo góc nhẹ,
-  chữ thường (lowercase), số đồng hồ dùng font mono lớn.
-  Chỉ bắt chước màu sắc / bố cục / kiểu chữ, không dùng ảnh hay hình minh họa của site gốc.
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap");
 
 :root {
-  --bg: #EFEFEB;            /* nền kem */
+  --bg: #B4D7CD;           
   --surface: #ffffff;       /* thẻ / khung trắng */
   --ink: #111111;           /* chữ + viền */
   --hover: #E0E0D5;         /* hover nút viền */
